@@ -14,38 +14,21 @@ This project involves building a C/C++ based simulator for an n-way set-associat
 ====================================
 Project Files:
 
-1. **cache_simulator.cpp**  
+1. **cache.cpp**  
    - The main source code for the cache simulator.
    - Implements an n-way set-associative cache.
    - Handles variable line size and associativity (number of ways).
    - Collects and prints statistics on cache performance (hits/misses).
 
-2. **memgen.h / memgen.cpp**  
-   - Contains the six memory reference generator functions: memGen1 through memGen6.
-   - These functions are called from the simulator to generate memory addresses.
-
-3. **main.cpp**  
-   - Entry point for the simulation.
-   - Configures different experiments as required.
-   - Runs simulation loops with varying parameters and logs results.
-
-4. **results/**  
+2. **results/**  
    - Contains the output data files for each experiment.
    - Format: CSV files or plain text logs showing hit/miss counts and ratios.
 
-5. **plots/**  
-   - Graphs showing the hit ratio vs. line size and hit ratio vs. number of ways for each memory generator.
-   - Generated using Python/matplotlib or any other preferred plotting tool.
-
-6. **report.pdf**  
+3. **report.pdf**  
    - The full project report including methodology, results, analysis, and conclusions.
    - Includes labeled graphs and explanations of trends observed.
 
-7. **validation_tests/**  
-   - Custom test cases used to validate the correctness of the simulator.
-   - Includes sample address traces and expected results.
-
-8. **README.txt**  
+4. **README.txt**  
    - This file.
 
 ====================================
@@ -54,16 +37,16 @@ Build Instructions:
 2. To compile the simulator:
 ```
 
-g++ -o cache\_simulator main.cpp cache\_simulator.cpp memgen.cpp
+g++ cache.cpp -o output.exe
 
 ```
 3. To run a simulation:
 ```
 
-./cache\_simulator
+output.exe
 
 ```
-You can edit `main.cpp` to configure experiments for different cache line sizes or associativity.
+You can edit `cache.cpp` to configure experiments for different cache line sizes or associativity.
 
 ====================================
 Running Experiments:
@@ -74,7 +57,6 @@ Running Experiments:
 ====================================
 Validation:
 - Simulator is verified using custom address traces and known outcomes.
-- Test results are included in the `validation_tests/` folder.
-- All experiments are automated and reproducible from the `main.cpp`.
+- All experiments are automated and reproducible from the `cache.cpp`.
 
 ====================================
