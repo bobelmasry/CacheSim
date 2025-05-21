@@ -20,15 +20,11 @@ Project Files:
    - Handles variable line size and associativity (number of ways).
    - Collects and prints statistics on cache performance (hits/misses).
 
-2. **results/**  
-   - Contains the output data files for each experiment.
-   - Format: CSV files or plain text logs showing hit/miss counts and ratios.
-
-3. **report.pdf**  
+2. **report.pdf**  
    - The full project report including methodology, results, analysis, and conclusions.
    - Includes labeled graphs and explanations of trends observed.
 
-4. **README.txt**  
+3. **README.txt**  
    - This file.
 
 ====================================
@@ -47,16 +43,5 @@ output.exe
 
 ```
 You can edit `cache.cpp` to configure experiments for different cache line sizes or associativity.
-
-====================================
-Running Experiments:
-- For **Experiment 1**, set number of sets to 4 and vary line size among {16, 32, 64, 128}.
-- For **Experiment 2**, fix line size to 64 bytes and vary number of ways among {1, 2, 4, 8, 16}.
-- Each experiment runs with 1,000,000 memory references per generator.
-
-====================================
-Validation:
-- Simulator is verified using custom address traces and known outcomes.
-- All experiments are automated and reproducible from the `cache.cpp`.
 
 ====================================
